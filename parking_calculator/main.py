@@ -34,7 +34,7 @@ def main():
     lines = Path("input.txt").read_text(encoding="utf-8").splitlines()
     results = [process_line(l.strip()) for l in lines
                if l.strip() and "RENDSZAM" not in l and "=" not in l]
-    Path("output.txt").write_text("\n".join(results), encoding="utf-8")
+    print("\n".join(results))
 
 if __name__ == "__main__":
     main()
